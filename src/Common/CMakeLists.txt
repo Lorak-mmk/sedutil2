@@ -1,0 +1,41 @@
+add_subdirectory(pbkdf2)
+add_subdirectory(version)
+
+target_sources(sedutil2-cli
+        PRIVATE
+            DtaAnnotatedDump.h
+            DtaAnnotatedDump.cpp
+            DtaCommand.h
+            DtaCommand.cpp
+            DtaConstants.h
+            DtaDev.h
+            DtaDev.cpp
+            DtaDevEnterprise.h
+            DtaDevEnterprise.cpp
+            DtaDevGeneric.h
+            DtaDevGeneric.cpp
+            DtaDevOpal.h
+            DtaDevOpal.cpp
+            DtaDevOpal1.h
+            DtaDevOpal1.cpp
+            DtaDevOpal2.h
+            DtaDevOpal2.cpp
+            DtaDiskType.h
+            DtaDiskType.cpp
+            DtaEndianFixup.h
+            DtaHashPwd.h
+            DtaHashPwd.cpp
+            DtaHexDump.h
+            DtaHexDump.cpp
+            DtaLexicon.h
+            DtaOptions.h
+            DtaOptions.cpp
+            DtaResponse.h
+            DtaResponse.cpp
+            DtaSession.h
+            DtaSession.cpp
+            DtaStructures.h
+            log.h
+            sedutil.cpp)
+
+target_include_directories(sedutil2-cli PRIVATE .)
