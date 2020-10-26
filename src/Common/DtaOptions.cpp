@@ -23,7 +23,7 @@ along with sedutil.  If not, see <http://www.gnu.org/licenses/>.
 #include "commithash.h"
 void usage()
 {
-    printf("sedutil v%s Copyright 2014-2017 Bright Plaza Inc. <drivetrust@drivetrust.com>\n", GIT_VERSION);
+    printf("sedutil v%s Copyright 2014-2017 Bright Plaza Inc. <drivetrust@drivetrust.com>\n", version.string);
     printf("a utility to manage self encrypting drives that conform\n");
     printf("to the Trusted Computing Group OPAL 2.0 SSC specification\n");
     printf("General Usage:                     (see readme for extended commandset)\n");
@@ -136,7 +136,7 @@ uint8_t DtaOptions(int argc, char * argv[], DTA_OPTIONS * opts)
 			if (loggingLevel > 7) loggingLevel = 7;
 			CLog::Level() = CLog::FromInt(loggingLevel);
 			LOG(D) << "Log level set to " << CLog::ToString(CLog::FromInt(loggingLevel));
-			LOG(D) << "sedutil version : " << version.string
+			LOG(D) << "sedutil version : " << version.string;
 		}
 		else if (!(strcmp("-n", argv[i]))) {
                         baseOptions += 1;
